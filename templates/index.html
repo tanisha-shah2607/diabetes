@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { width: 350px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        input { width: 100%; padding: 8px; margin: 5px 0; }
+        button { background-color: blue; color: white; padding: 10px; border: none; cursor: pointer; }
+        .result { margin-top: 20px; font-size: 20px; font-weight: bold; }
+        .info { font-size: 12px; color: gray; }
+    </style>
+</head>
+<body>
+    <h2>Diabetes Prediction</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="Glucose" placeholder="Glucose (Min: 0, Max: 200)" required>
+        <input type="text" name="BloodPressure" placeholder="Blood Pressure (Min: 0, Max: 150)" required>
+        <input type="text" name="SkinThickness" placeholder="Skin Thickness (Min: 0, Max: 99)" required>
+        <input type="text" name="Insulin" placeholder="Insulin (Min: 0, Max: 900)" required>
+        <input type="text" name="BMI" placeholder="BMI (Min: 0, Max: 67)" required>
+        <input type="text" name="Age" placeholder="Age (Min: 21, Max: 81)" required>
+        <input type="text" name="Pregnancies" placeholder="Pregnancies (Min: 0, Max: 17)" required>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function (Min: 0.08, Max: 2.42)" required>
+        <button type="submit">Predict</button>
+    </form>
+    
+</body>
+</html>
